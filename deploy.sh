@@ -3,7 +3,7 @@
 cd iac
 
 # Define the SSH key used authenticate in the provisioned servers.
-echo "$DIGITALOCEAN_PRIVATE_KEY" > /tmp/.id_rsa
+echo "$DIGITALOCEAN_SSH_KEY" > /tmp/.id_rsa
 
 # Define the SSH key permissions.
 chmod og-rwx /tmp/.id_rsa

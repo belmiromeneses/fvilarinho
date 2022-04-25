@@ -62,7 +62,7 @@ resource "digitalocean_droplet" "cluster-manager" {
       type        = "ssh"
       user        = "root"
       agent       = false
-      private_key = var.digitalocean_private_key
+      private_key = var.digitalocean_ssh_key
       host        = self.ipv4_address
     }
   }

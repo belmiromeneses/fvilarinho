@@ -41,8 +41,10 @@ fi
 $TERRAFORM_CMD init
 $TERRAFORM_CMD apply -auto-approve \
                      -var "digitalocean_token=$DIGITALOCEAN_TOKEN" \
-                     -var "digitalocean_public_key=$DIGITALOCEAN_PUBLIC_KEY" \
-                     -var "digitalocean_private_key=$DIGITALOCEAN_PRIVATE_KEY" \
+                     -var "digitalocean_ssh_key=$DIGITALOCEAN_SSH_KEY" \
+                     -var "linode_token=$LINODE_TOKEN" \
+                     -var "linode_ssh_key=$LINODE_SSH_KEY" \
+                     -var "k3s_token=$K3S_TOKEN" \
 #                     -var "datadog_agent_key=$DATADOG_AGENT_KEY"
 
 # Get the IP of the cluster manager used to deploy the application.

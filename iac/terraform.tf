@@ -80,6 +80,7 @@ resource "linode_instance" "cluster-worker" {
     inline = [
       "hostnamectl set-hostname cluster-worker",
       "apt -y update",
+      "sleep 2",
       "apt -y upgrade",
       "apt -y install curl wget htop unzip dnsutils",
       "export K3S_URL=https://${digitalocean_droplet.cluster-manager.ipv4_address}:6443",

@@ -44,7 +44,7 @@ resource "digitalocean_droplet" "cluster-manager" {
     inline = [
       "hostnamectl set-hostname cluster-manager",
       "apt -y update",
-      "sleep 2",
+      "sleep 5",
       "apt -y upgrade",
       "apt -y install curl wget htop unzip dnsutils",
       "export K3S_TOKEN=${var.digitalocean_token}",

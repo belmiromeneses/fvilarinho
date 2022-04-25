@@ -26,13 +26,6 @@ public class PhonebookService{
         super();
     }
 
-    public void teste(){
-        String valor = null;
-        if (valor.equals("Teste")){
-            System.out.println("Passou");
-        }
-    }
-
     public PhonebookService(PhonebookPersistence persistence){
         this();
         

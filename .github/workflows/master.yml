@@ -69,7 +69,7 @@ jobs:
 
     - name: 11. Package Analysis - White-box testing (SAST)
       env:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       run: ./packageAnalysis.sh
 
     - name: 12. Publishing

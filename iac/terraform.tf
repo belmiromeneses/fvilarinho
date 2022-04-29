@@ -49,7 +49,7 @@ resource "digitalocean_droplet" "cluster-manager" {
       "apt -y install curl wget htop unzip dnsutils",
       "export K3S_TOKEN=${var.digitalocean_token}",
       "curl -sfL https://get.k3s.io | sh -",
-      "kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml" #,
+      "kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml" ,
       "export DD_AGENT_MAJOR_VERSION=7",
       "export DD_API_KEY=${var.datadog_agent_key}",
       "export DD_SITE=datadoghq.com",
